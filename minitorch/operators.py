@@ -43,7 +43,7 @@ def add(a, b):
     return a + b
 
 def neg(a):
-    return -a
+    return float(-a)
 
 def lt(a, b):
     return a < b
@@ -61,16 +61,16 @@ def sigmoid(a):
     return 1 / (1 + math.exp(-a)) if a >= 0 else (math.exp(a)) / (1 + math.exp(a))
 
 def relu(a):
-    return max(0, a)
+    return max(0.0, a)
 
 def log(a):
-    return math.log(a)
+    return float(math.log(a))
 
 def exp(a):
-    return math.exp(a)
+    return float(math.exp(a))
 
 def inv(a):
-    return 1 / a
+    return 1.0 / a
 
 def log_back(a, b):
     return b / a
@@ -79,7 +79,7 @@ def inv_back(a, b):
     return - b / (a * a)
 
 def relu_back(a, b):
-    return b if a >= 0 else  0
+    return b if a >= 0 else  0.0
 
 # ## Task 0.3
 
@@ -115,7 +115,7 @@ def negList(l: list):
 
 def sum(l: list):
     if not l:
-        return 0
+        return 0.0
     return reduce(add, l)
 
 def addLists(l1:list, l2:list):
